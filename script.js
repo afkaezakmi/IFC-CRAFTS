@@ -5,7 +5,7 @@ fetch('products.json')
 
     data.forEach(item => {
       const col = document.createElement('div');
-      col.classList.add('col-lg-3', 'col-md-4', 'col-sm-6');
+      col.classList.add('col-lg-2', 'col-md-4', 'col-sm-6');
 
       // ✅ fallback values
       const name = item.name || "No name";

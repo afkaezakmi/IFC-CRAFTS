@@ -20,6 +20,28 @@
     "size": "Small",
     "price": "₱150",
     "image": "small/small(4).jpg"
+  },
+  {
+    "name": "HAHSAHSHASHA",
+    "size": "Small",
+    "price": "₱150",
+    "image": "small/small(1).jpg",
+    "description": "Handmade craft item made by students."
+  },
+  {
+    "size": "Small",
+    "price": "₱150",
+    "image": "small/small(2).jpg"
+  },
+  {
+    "size": "Small",
+    "price": "₱150",
+    "image": "small/small(3).jpg"
+  },
+  {
+    "size": "Small",
+    "price": "₱150",
+    "image": "small/small(4).jpg"
   }
 
 ]
