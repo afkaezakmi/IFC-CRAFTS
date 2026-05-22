@@ -35,7 +35,7 @@ function renderProducts(products) {
 
   products.forEach(item => {
     const col = document.createElement('div');
-    col.classList.add('col-lg-2', 'col-md-4', 'col-sm-6');
+    col.classList.add('col-6', 'col-sm-6', 'col-md-4', 'col-lg-3', 'col-xl-2')
 
     col.innerHTML = `
       <div class="product-card shadow-sm">

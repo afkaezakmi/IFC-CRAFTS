@@ -191,3 +191,38 @@
     border-bottom: 3px solid #ffb347;
 }
 
+@media (max-width: 768px) {
+  .col-md-2 {
+    position: static !important;
+  }
+}
+
+.navbar-brand {
+  font-size: clamp(18px, 4vw, 48px);
+}
+
+.navbar-brand img {
+  width: clamp(50px, 10vw, 110px);
+  height: auto;
+}
+
+.product-img-wrapper {
+  height: 220px;
+}
+
+@media (max-width: 576px) {
+  .product-img-wrapper {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-body {
+    padding: 15px !important;
+  }
+
+  .btn-check + .btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
