@@ -69,12 +69,28 @@ body {
         
 /* ✅ MODERN SECTION BOX */
 .section-box {
-    background: white;
-    padding: 30px;
-    border-radius: 16px; /* ✅ smoother */
-    margin-bottom: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* ✅ deeper */
-    transition: 0.2s;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 576px) {
+  .section-box {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .section-box p,
+  .section-box li {
+    font-size: 14px;
+  }
 }
 
 /* ✅ subtle hover */
@@ -96,6 +112,16 @@ body {
 .highlight {
     color: #d92323;
     font-weight: 700;
+}
+
+.section-title {
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 700;
+}
+
+.highlight {
+  color: #ff6600;
+  font-weight: 600;
 }
 
 /* ✅ text spacing */
@@ -159,4 +185,53 @@ body {
 .copyright {
     font-size: 14px;
     color: #ddd;
+}
+
+.navbar-brand {
+  font-size: clamp(20px, 5vw, 42px);
+}
+
+.navbar-brand img {
+  width: clamp(50px, 10vw, 100px);
+  height: auto;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+@media (max-width: 576px) {
+  ul {
+    padding-left: 15px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+.footer-section {
+  padding: 30px 20px;
+}
+
+@media (max-width: 576px) {
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .footer-section p {
+    font-size: 13px;
+  }
+}
+
+
+/* ✅ Make navbar text responsive */
+.navbar-brand {
+  font-size: clamp(20px, 4vw, 48px);
+}
+
+/* ✅ Make logo responsive */
+.navbar-brand img {
+  width: clamp(50px, 10vw, 110px);
+  height: auto;
 }
