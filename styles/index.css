@@ -364,4 +364,20 @@ main {
         transform: translateY(0);
         pointer-events: auto;
     }
+
+    /* ✅ ✅ THIS IS THE ONLY NEW PART (FOOTER FIX) ✅ ✅ */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-contact p {
+        justify-content: center;
+    }
 }
