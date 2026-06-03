@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>IFC Crafts | Handmade Products</title>
+
+    <!-- Google Fonts & The Seasons (Premium Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/the-seasons" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS (grid, modals, utilities) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Main stylesheet (merged: premium navbar/footer + product styles) -->
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+
+    <!-- ========== PREMIUM BLACK STICKY NAVBAR (HOMEPAGE DESIGN) ========== -->
+    <<header class="navbar">
+    <div class="nav-container">
+        <div class="logo-area">
+            <img src="pics/Logo.jpg" alt="IFC Crafts Logo" class="nav-logo">
+            <span class="brand-name">IFC CRAFTS</span>
+        </div>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="index.html#about">ABOUT</a>
+            <a href="#" class="active">PRODUCTS</a>
+            <a href="services.html">SERVICES</a>
+            <a href="index.html#contact">CONTACT US</a>
+            <a href="reviews.html">REVIEWS</a>
+        </nav>
+    </div>
+</header>
+
+    <!-- ========== MAIN CONTENT (PRODUCT PAGE LAYOUT WITH FIXED NAVBAR OFFSET) ========== -->
+    <main class="product-main-wrapper">
+        <div class="container-fluid px-4 px-lg-5 py-5 product-grid-container">
+            <div class="row g-4">
+                
+                <!-- FILTER SIDEBAR (STICKY, RESPONSIVE) -->
+                <div class="col-12 col-md-3 col-lg-2 mb-4">
+                    <button class="btn btn-dark w-100 mb-3 d-md-none filter-toggle-btn" data-bs-toggle="collapse" data-bs-target="#filterBox">
+                        <i class="bi bi-funnel-fill me-1"></i> Show Filters
+                    </button>
+                    <div id="filterBox" class="collapse d-md-block">
+                        <div class="card p-3 shadow-sm border-0 filter-card">
+                            <h5 class="fw-bold mb-2">Filter</h5>
+                            
+                            <!-- Size Filter -->
+                            <p class="mt-3 mb-1 fw-semibold">Size</p>
+                            <div>
+                                <input type="checkbox" id="small"> <label for="small" class="ms-1">Small</label><br>
+                                <input type="checkbox" id="medium"> <label for="medium" class="ms-1">Medium</label><br>
+                                <input type="checkbox" id="large"> <label for="large" class="ms-1">Large</label>
+                            </div>
+                            
+                            <!-- Price Filter -->
+                            <p class="mt-3 mb-1 fw-semibold">Price</p>
+                            <div>
+                                <input type="radio" name="price" id="allPrice" checked> <label for="allPrice" class="ms-1">All</label><br>
+                                <input type="radio" name="price" id="under200"> <label for="under200" class="ms-1">Under ₱200</label><br>
+                                <input type="radio" name="price" id="200to500"> <label for="200to500" class="ms-1">₱200 - ₱500</label><br>
+                                <input type="radio" name="price" id="above500"> <label for="above500" class="ms-1">Above ₱500</label>
+                            </div>
+                            
+                            <!-- Custom Craft CTA -->
+                            <div class="mt-4 pt-2">
+                                <p class="fw-bold mb-2">✨ Do you want custom craft?</p>
+                                <button class="btn btn-outline-dark w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#customModal">
+                                    <i class="bi bi-pencil-square me-1"></i> Request Custom
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PRODUCT GRID DYNAMIC AREA -->
+                <div class="col-md-9 col-lg-10">
+                    <div id="product-container" class="row g-4">
+                        <!-- product cards will be injected via script.js (maintaining original functionality) -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== PRODUCT DETAIL MODAL (KEPT INTACT) ========== -->
+    <div class="modal fade" id="itemModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-4 overflow-hidden border-0 shadow-lg">
+                <div class="modal-header border-0 bg-white">
+                    <h5 class="modal-title fw-bold" id="modalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center">
+                            <img id="modalImage" class="img-fluid rounded-4 shadow-sm" style="max-height: 380px; object-fit: contain;" alt="Product">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modalPrice" class="fw-bold text-dark mb-3"></h3>
+                            <p class="text-muted"><strong>Size:</strong> <span id="modalSize"></span></p>
+                            <p id="modalDescription" class="mb-4 text-secondary"></p>
+                            <label class="mb-1 fw-semibold">Quantity</label>
+                            <input type="number" id="quantity" class="form-control mb-3" value="1" min="1" style="max-width: 130px;" oninput="updateBuyLink()">
+                            <div class="d-grid gap-2">
+                                <a id="buyBtn" target="_blank" class="btn btn-success fw-bold py-2 rounded-pill"><i class="bi bi-bag-check me-1"></i> Buy Now</a>
+                                <a href="terms.html" target="_blank" class="btn btn-link text-decoration-none mt-1" style="font-size: 13px;">Terms of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CUSTOM CRAFT MODAL ========== -->
+    <div class="modal fade" id="customModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow border-0">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold fs-4"><i class="bi bi-gem me-2"></i>Customize Your Craft</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body px-4 pb-4">
+                    <form id="customForm">
+                        <div class="mb-4">
+                            <label class="fw-bold mb-2">Size</label>
+                            <div class="d-flex flex-wrap gap-3">
+                                <input type="radio" class="btn-check" name="size" id="size1" value="Small" required>
+                                <label class="btn btn-outline-dark rounded-pill px-4" for="size1">Small</label>
+                                <input type="radio" class="btn-check" name="size" id="size2" value="Medium">
+                                <label class="btn btn-outline-dark rounded-pill px-4" for="size2">Medium</label>
+                                <input type="radio" class="btn-check" name="size" id="size3" value="Large">
+                                <label class="btn btn-outline-dark rounded-pill px-4" for="size3">Large</label>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="fw-bold mb-2">Type</label>
+                            <div class="d-flex flex-wrap gap-3">
+                                <input type="radio" class="btn-check" name="type" id="type1" value="Necklace" required>
+                                <label class="btn btn-outline-dark rounded-pill px-4" for="type1">Necklace</label>
+                                <input type="radio" class="btn-check" name="type" id="type2" value="Bracelet">
+                                <label class="btn btn-outline-dark rounded-pill px-4" for="type2">Bracelet</label>
+                                <input type="radio" class="btn-check" name="type" id="type3" value="Keychain">
+                                <label class="btn btn-outline-dark rounded-pill px-4" for="type3">Keychain</label>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="fw-bold mb-2">Describe your design</label>
+                            <textarea id="customDesc" class="form-control rounded-3" rows="3" placeholder="Tell us your idea, color, vibe..." required></textarea>
+                            <small class="text-muted mt-1 d-block">📌 You can send photo references after submitting via Messenger.</small>
+                        </div>
+                        <div class="mb-4">
+                            <label class="fw-bold mb-2">Upload Reference Image</label>
+                            <input type="file" id="imageUpload" class="form-control" accept="image/*">
+                            <div class="mt-3 text-center">
+                                <img id="imagePreview" src="" style="max-width:100%; max-height:200px; display:none; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+                            </div>
+                            <small class="text-muted">📸 Optional: Upload an image to show your design idea.</small>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 py-2 fw-bold rounded-pill"><i class="bi bi-send me-1"></i> Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONFIRMATION MODAL (FOR CUSTOM REQUEST) -->
+    <div class="modal fade" id="confirmModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 text-center p-4 border-0 shadow">
+                <h5 class="fw-bold mb-3">⚠️ One More Step</h5>
+                <p class="mb-4">After Messenger opens, please send your uploaded image in the chat.</p>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-secondary w-50 rounded-pill" data-bs-dismiss="modal">Cancel</button>
+                    <button id="continueBtn" class="btn btn-success w-50 rounded-pill">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== PREMIUM BLACK FOOTER (HOMEPAGE DESIGN) ========== -->
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h3>IFC CRAFTS</h3>
+            <p>Handmade • Creative • Student Artists</p>
+        </div>
+        
+        <div class="footer-socials">
+            <h4>Visit Our Pages</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1FCM4HD3Uy/" target="_blank" class="social-icon fb">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/ifc_crafts" target="_blank" class="social-icon ig">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>Email: ifc.artgallery@gmail.com</p>
+            <p>Phone: +63 952 678 1122</p>
+            <p>Location: Taytay, Rizal</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 IFC Crafts. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts/script.js"></script>
+ 
+</body>
+</html>

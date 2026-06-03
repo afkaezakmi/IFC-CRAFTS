@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFC Crafts - Reviews</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=The+Seasons&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="pics/Logo.jpg" alt="IFC Crafts Logo" class="nav-logo">
+                <span class="brand-name">IFC CRAFTS</span>
+            </div>
+           
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="index.html#about">ABOUT</a>
+                <a href="products.html">PRODUCTS</a>
+                <a href="services.html">SERVICES</a>
+                <a href="index.html#contact">CONTACT US</a>
+                <a href="reviews.html" class="active">REVIEWS</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-wrapper">
+        
+        <section id="reviews-section" class="section-container reviews-page-layout reveal active-scroll">
+            
+            <div class="review-form-wrapper premium-fade-up">
+                <h2 class="gothic-title highlight-text">Share Your Thoughts</h2>
+                <p class="subtitle text-black" style="margin-bottom: 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">We value your feedback</p>
+                
+                <div class="form-container form-glow" style="max-width: 100%; margin: 0;">
+                    <form id="reviewForm">
+                        <div class="input-group">
+                            <label for="reviewerName">Your Name</label>
+                            <input type="text" id="reviewerName" required placeholder="e.g., Jane Doe">
+                        </div>
+           
+                        <div class="input-group">
+                            <label for="productSelected">Product Reviewed</label>
+                            <input type="text" id="productSelected" required placeholder="e.g., Anatomical Heart Pendant">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Rating</label>
+                            <div class="rating-select">
+                                <input type="radio" name="ratingStar" id="star5" value="5" checked><label for="star5"><i class="fas fa-star"></i> 5</label>
+                                <input type="radio" name="ratingStar" id="star4" value="4"><label for="star4"><i class="fas fa-star"></i> 4</label>
+                                <input type="radio" name="ratingStar" id="star3" value="3"><label for="star3"><i class="fas fa-star"></i> 3</label>
+                                <input type="radio" name="ratingStar" id="star2" value="2"><label for="star2"><i class="fas fa-star"></i> 2</label>
+                                <input type="radio" name="ratingStar" id="star1" value="1"><label for="star1"><i class="fas fa-star"></i> 1</label>
+                            </div>
+                        </div>
+           
+                        <div class="input-group">
+                            <label for="reviewMessage">Review Description</label>
+                            <textarea id="reviewMessage" rows="5" required placeholder="What did you love about your order?..."></textarea>
+                        </div>
+           
+                        <button type="submit" class="submit-btn">
+                            Submit Review <i class="fas fa-paper-plane" style="margin-left: 8px; font-size: 0.85rem;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="reviews-feed-wrapper premium-scale-in link-delay-1">
+                <h2 class="gothic-title highlight-text">Customer Reviews</h2>
+                <p class="subtitle text-black" style="margin-bottom: 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">What our collectors say</p>
+                
+                <div class="reviews-feed" id="reviewsFeed">
+                    
+                    <div class="review-card glow-container">
+                        <div class="review-header">
+                            <div>
+                                <h4 class="reviewer-name">Alyssa Valeriano</h4>
+                                <span class="reviewed-product">Purchased: <strong>Anatomical Heart Pendant</strong></span>
+                            </div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">The level of craftsmanship is absolutely stunning! The detailing on the clay heart necklace is incredible, and I've received so many compliments already. Love supporting student-led art!</p>
+                    </div>
+
+                    <div class="review-card glow-container">
+                        <div class="review-header">
+                            <div>
+                                <h4 class="reviewer-name">Mark Santos</h4>
+                                <span class="reviewed-product">Purchased: <strong>Onigiri Friends Keychain</strong></span>
+                            </div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">Super adorable item! It looks neat and durable on my backpack setup. Shipping and tracking were smooth as well. Will definitely browse for more items soon.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>IFC CRAFTS</h3>
+                <p>Handmade • Creative • Student Artists</p>
+            </div>
+           
+            <div class="footer-socials">
+                <h4>Visit Our Pages</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1FCM4HD3Uy/" target="_blank" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/ifc_crafts?..." target="_blank" class="social-icon ig"><i class="fab fa-instagram"></i></a>
+                </div>
+             </div>
+           
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: ifc.artgallery@gmail.com</p>
+                <p>Phone: +63 952 678 1122</p>
+                <p>Location: Taytay, Rizal</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 IFC Crafts. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Element Selection
+        const reviewForm = document.getElementById('reviewForm');
+        const reviewsFeed = document.getElementById('reviewsFeed');
+
+        // 2. Initialize or Fetch Array from Browser Storage
+        let savedReviews = JSON.parse(localStorage.getItem('ifc_crafts_reviews')) || [];
+
+        // 3. Helper Function: Generate Star HTML Icons based on count
+        function generateStars(rating) {
+            let starsHTML = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    starsHTML += '<i class="fas fa-star"></i>';
+                } else {
+                    starsHTML += '<i class="far fa-star"></i>';
+                }
+            }
+            return starsHTML;
+        }
+
+        // 4. Core Function: Inject a review block into the UI Feed
+        function renderReviewCard(reviewObj, isNewSubmission = false) {
+            const card = document.createElement('div');
+            // Apply animation wrapper only if it was just submitted live
+            card.className = `review-card glow-container ${isNewSubmission ? 'user-submitted' : ''}`;
+            
+            card.innerHTML = `
+                <div class="review-header">
+                    <div>
+                        <h4 class="reviewer-name">${reviewObj.name}</h4>
+                        <span class="reviewed-product">Purchased: <strong>${reviewObj.product}</strong></span>
+                    </div>
+                    <div class="review-stars">
+                        ${generateStars(reviewObj.rating)}
+                    </div>
+                </div>
+                <p class="review-text">${reviewObj.text}</p>
+            `;
+            
+            // Insert at the top of the feed container
+            reviewsFeed.insertBefore(card, reviewsFeed.firstChild);
+        }
+
+        // 5. Load Engine: Render all stored items on initial page mount
+        function loadSavedReviews() {
+            savedReviews.forEach(review => {
+                renderReviewCard(review, false);
+            });
+        }
+
+        // Run the loader immediately when script initializes
+        loadSavedReviews();
+
+        // 6. Form Submission Event Handler
+        reviewForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop page reload
+
+            // Extract values safely
+            const name = document.getElementById('reviewerName').value;
+            const product = document.getElementById('productSelected').value;
+            const textContent = document.getElementById('reviewMessage').value;
+            const ratingValue = parseInt(document.querySelector('input[name="ratingStar"]:checked').value);
+
+            // Structure a clean data object
+            const newReview = {
+                name: name,
+                product: product,
+                text: textContent,
+                rating: ratingValue
+            };
+
+            // Push into runtime array and update Browser Storage
+            savedReviews.push(newReview);
+            localStorage.setItem('ifc_crafts_reviews', JSON.stringify(savedReviews));
+
+            // Instantly add to UI with smooth slide-in entry animation
+            renderReviewCard(newReview, true);
+
+            // Reset layout fields
+            reviewForm.reset();
+        });
+
+        // Mobile dropdown panel trigger closer
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('menu-toggle').checked = false;
+            });
+        });
+    </script>
+</body>
+</html>

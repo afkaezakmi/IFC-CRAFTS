@@ -3,333 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IFC Crafts</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css">
+    <title>IFC Crafts - Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=The+Seasons&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg custom-navbar">
-    <div class="container-fluid">
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="pics/Logo.jpg" alt="IFC Crafts Logo" class="nav-logo">
+                <span class="brand-name">IFC CRAFTS</span>
+            </div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-        <a class="navbar-brand" href="#">
-            <img src="images/ifc_crafts.jpg" alt="Logo">
-            IFC CRAFTS
-        </a>
-
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">PRODUCT</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
-            </ul>
+            <nav class="nav-links">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="products.html">PRODUCTS</a>
+                <a href="services.html">SERVICES</a>
+                <a href="#contact">CONTACT US</a>
+                <a href="reviews.html">REVIEWS</a> 
+            </nav>
         </div>
+    </header>
 
-    </div>
-</nav>
+    <main class="main-wrapper">
 
-<!-- ✅ Main Content Area -->
-
-<main class="container-fluid px-5 my-5">
-    <div class="row">
-
-        <!-- ✅ Sidebar -->
-        <div class="col-12 col-md-3 col-lg-2 mb-4">
-            <button class="btn btn-dark w-100 mb-3 d-md-none" data-bs-toggle="collapse" data-bs-target="#filterBox">
-  Show Filters
-</button>
-             <div id="filterBox" class="collapse d-md-block">
-            <div class="card p-3 shadow-sm">
-
-                <h5>Filter</h5>
-
-
-                <!-- Size Filter -->
-                <p class="mt-3 mb-1"><strong>Size</strong></p>
-                <div>
-                    <input type="checkbox" id="small"> Small<br>
-                    <input type="checkbox" id="medium"> Medium<br>
-                    <input type="checkbox" id="large"> Large
-                </div>
-
-                <!-- Price Filter -->
-                <p class="mt-3 mb-1"><strong>Price</strong></p>
-                <div>
-    <input type="radio" name="price" id="allPrice" checked> All<br>
- <input type="radio" name="price" id="under200"> Under ₱200<br>
-  <input type="radio" name="price" id="200to500"> ₱200 - ₱500<br>
-  <input type="radio" name="price" id="above500"> Above ₱500
-
-
-
-                </div>
-
-                <!-- ✅ Custom Craft Section -->
-                <div class="mt-4">
-
-                    <p class="fw-bold">Do you want custom craft?</p>
-
-                    <button class="btn btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#customModal">
-    Request Custom
-</button>
-
-                </div>
-                
-
+        <section id="home" class="section-container home-section reveal">
+            <div class="home-text">
+                <h1 class="premium-fade-up header-glow"><span class="highlight-text">IFC Crafts:</span> Streamlined Access to Handmade Products</h1>
+                <p class="premium-fade-up link-delay-1 home-subtext">Enhancing the buying experience by simplifying access to handmade products and improving communication between customers and the business.</p>
             </div>
-            </div>
-        </div>
+            
+            <div class="carousel-wrapper single-card-carousel premium-scale-in link-delay-2 glow-container">
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="auto-track">
+                        
+                        <div class="product-card">
+                            <div class="card-image-wrapper">
+                                <img src="pics/heartPendant.jpg" alt="Anatomical Heart Pendant" class="card-img">
+                            </div>
+                            <div class="card-info">
+                                <h4>Anatomical Heart</h4>
+                                <p>Sculpted Clay Heart Necklace</p>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="card-image-wrapper">
+                                <img src="pics/keychain2.jpg" alt="Tamagotchi Style Keychains" class="card-img">
+                            </div>
+                            <div class="card-info">
+                                <h4>Retro Console Accents</h4>
+                                <p>Handmade Miniature Clay Keychains</p>
+                            </div>
+                        </div>
 
-        <!-- ✅ Product Area -->
-        <div class="col-md-10">
-            <div id="product-container" class="row g-3">
-                <!-- Cards will be generated here -->
-            </div>
-        </div>
+                        <div class="product-card">
+                            <div class="card-image-wrapper">
+                                <img src="pics/henna2.jpg" alt="Floral Henna Design" class="card-img">
+                            </div>
+                            <div class="card-info">
+                                <h4>Floral Henna Art</h4>
+                                <p>Elegantly Linked Hand Elements</p>
+                            </div>
+                        </div>
 
-    </div>
-</main>
+                        <div class="product-card">
+                            <div class="card-image-wrapper">
+                                <img src="pics/stareyePendant.jpg" alt="Star Eye Pendant" class="card-img">
+                            </div>
+                            <div class="card-info">
+                                <h4>Cosmic Eye Star</h4>
+                                <p>Surrealist Statement Cord Pendant</p>
+                            </div>
+                        </div>
 
-<div class="modal fade" id="itemModal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content rounded-4 overflow-hidden">
+                        <div class="product-card">
+                            <div class="card-image-wrapper">
+                                <img src="pics/keychain3.jpg" alt="Bear Riceball Keychains" class="card-img">
+                            </div>
+                            <div class="card-info">
+                                <h4>Onigiri Friends</h4>
+                                <p>Cute Sculpted Riceball Trinkets</p>
+                            </div>
+                        </div>
 
-      <!-- Header -->
-      <div class="modal-header border-0">
-        <h5 class="modal-title fw-bold" id="modalTitle"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
+                        <div class="product-card">
+                            <div class="card-image-wrapper">
+                                <img src="pics/henna.jpg" alt="Sun and Moon Henna Art" class="card-img">
+                            </div>
+                            <div class="card-info">
+                                <h4>Celestial Henna</h4>
+                                <p>Custom Sun & Moon Temporary Ink</p>
+                            </div>
+                        </div>
 
-      <!-- Body -->
-      <div class="modal-body">
-        <div class="row g-4">
+                        <div class="product-card">
+                            <div class="card-image-wrapper">
+                                <img src="pics/keychain.jpg" alt="White Seal Keychains" class="card-img">
+                            </div>
+                            <div class="card-info">
+                                <h4>Seal Friends</h4>
+                                <p>Handmade Cute Chubby Seal Trinkets</p>
+                            </div>
+                        </div>
 
-          <!-- LEFT: IMAGE -->
-          <div class="col-md-6">
-            <img id="modalImage" class="img-fluid rounded shadow-sm">
-          </div>
+                        <div class="product-card">
+                            <div class="card-image-wrapper">
+                                <img src="pics/henna3.jpg" alt="Red Bow Henna Tattoo 888" class="card-img">
+                            </div>
+                            <div class="card-info">
+                                <h4>Coquette Ribbon Art</h4>
+                                <p>Minimalist Tinted Line Illustration</p>
+                            </div>
+                        </div>
 
-          <!-- RIGHT: DETAILS -->
-          <div class="col-md-6 d-flex flex-column justify-content-center">
-
-            <!-- Price -->
-            <h3 id="modalPrice" class="fw-bold text-dark mb-3"></h3>
-
-
-            <!-- Size -->
-            <p class="text-muted">
-              <strong>Size:</strong> <span id="modalSize"></span>
-            </p>
-
-            <!-- Description -->
-            <p id="modalDescription" class="mb-4"></p>
-
-            <!-- Quantity -->
-            <label class="mb-1"><strong>Quantity</strong></label>
-            <input type="number" id="quantity" class="form-control mb-3" value="1" min="1"
-oninput="updateBuyLink()">
-
-
-            <!-- Buttons -->
-            <div class="d-grid gap-2">
-                
-              <a id="buyBtn" target="_blank" class="btn btn-success fw-bold">
-    <i class="bi bi-bag"></i> Buy Now
-</a>
-<a href="terms.html" target="_blank" class="btn btn-link text-decoration-none mt-2" style="font-size: 13px;">
-  Terms of Service
-</a>
-
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="customModal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content rounded-4 shadow">
-
-      <!-- HEADER -->
-      <div class="modal-header border-0 pb-0">
-        <h5 class="modal-title fw-bold fs-4">Customize Your Craft</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <!-- BODY -->
-      <div class="modal-body px-4 pb-4">
-
-        <form id="customForm">
-
-          <!-- ✅ SIZE -->
-          <div class="mb-4">
-            <label class="fw-bold mb-2">Size</label>
-            <div class="d-flex gap-3">
-
-              <input type="radio" class="btn-check" name="size" id="size1" value="Small" required>
-              <label class="btn btn-outline-dark" for="size1">Small</label>
-
-              <input type="radio" class="btn-check" name="size" id="size2" value="Medium">
-              <label class="btn btn-outline-dark" for="size2">Medium</label>
-
-              <input type="radio" class="btn-check" name="size" id="size3" value="Large">
-              <label class="btn btn-outline-dark" for="size3">Large</label>
-
-            </div>
-          </div>
-
-          <!-- ✅ TYPE -->
-          <div class="mb-4">
-            <label class="fw-bold mb-2">Type</label>
-            <div class="d-flex gap-3">
-
-              <input type="radio" class="btn-check" name="type" id="type1" value="Necklace" required>
-              <label class="btn btn-outline-dark" for="type1">Necklace</label>
-
-              <input type="radio" class="btn-check" name="type" id="type2" value="Bracelet">
-              <label class="btn btn-outline-dark" for="type2">Bracelet</label>
-
-              <input type="radio" class="btn-check" name="type" id="type3" value="Keychain">
-              <label class="btn btn-outline-dark" for="type3">Keychain</label>
-
-            </div>
-          </div>
-
-          <!-- ✅ DESCRIPTION -->
-          <div class="mb-4">
-            <label class="fw-bold mb-2">Describe your design</label>
-
-            <textarea 
-              id="customDesc"
-              class="form-control"
-              rows="3"
-              placeholder="Tell us your idea, color, vibe..."
-              required
-            ></textarea>
-
-            <small class="text-muted">
-              📌 You can send photo references after submitting via Messenger.
-            </small>
-          </div>
-
-          <!-- ✅ IMAGE UPLOAD -->
-<div class="mb-4">
-  <label class="fw-bold mb-2">Upload Reference Image</label>
-
-  <input 
-    type="file" 
-    id="imageUpload" 
-    class="form-control"
-    accept="image/*"
-  >
-
-  <!-- ✅ Preview -->
-  <div class="mt-3 text-center">
-    <img id="imagePreview" 
-         src="" 
-         style="max-width:100%; max-height:200px; display:none; border-radius:10px;">
-  </div>
-
-  <small class="text-muted">
-    📸 Optional: Upload an image to show your design idea.
-  </small>
-</div>
-
-
-          <!-- ✅ SUBMIT -->
-          <button type="submit" class="btn btn-success w-100 py-2 fw-bold">
-            <i class="bi bi-send"></i> Submit Request
-          </button>
-
-        </form>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="confirmModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content rounded-4 text-center p-4">
-
-      <h5 class="fw-bold mb-3">⚠️ One More Step</h5>
-
-      <p class="mb-4">
-        After Messenger opens, please send your uploaded image in the chat.
-      </p>
-
-      <div class="d-flex gap-2">
-        <button class="btn btn-secondary w-50" data-bs-dismiss="modal">
-          Cancel
-        </button>
-
-        <button id="continueBtn" class="btn btn-success w-50">
-          Continue
-        </button>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-
-<!-- ✅ Footer -->
-<footer class="footer-section text-white">
-    <div class="container">
-        <div class="row text-center text-md-start">
-
-            <div class="col-md-4 mb-3">
-                <h3 class="footer-title">IFC CRAFTS</h3>
-                <p class="footer-sub">Handmade • Creative • Student Artists</p>
-            </div>
-
-            <div class="col-md-4 mb-3 text-center">
-                <h5>Visit Our Pages</h5>
-                <div class="social-icons mt-2">
-                    <a href="#" class="icon fb"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="icon ig"><i class="bi bi-instagram"></i></a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="col-md-4 mb-3 text-md-end">
-                <h5>Contact Us</h5>
+        <hr class="section-divider">
+
+        <section id="about" class="section-container about-section reveal">
+            <div class="about-logo-wrapper premium-scale-in">
+                <img src="pics/Logo.jpg" alt="IFC Crafts Large Logo" class="about-big-logo">
+            </div>
+    
+            <div class="about-text">
+                <h2 class="gothic-title premium-fade-up highlight-text">About Us</h2>
+                <p class="subtitle premium-fade-up link-delay-1">Learn more about our business</p>
+        
+                <h3 class="premium-fade-up link-delay-2 text-black">Crafting Creativity with Purpose</h3>
+                <p class="description premium-fade-up link-delay-3">
+                IFC Crafts is a handmade craft business run by student artists, dedicated to providing customers with unique, high-quality, and personalized products such as necklaces, keychains, and henna art. The business aims to deliver a more organized and efficient experience by making product browsing, pricing, and ordering easier and more accessible. Through creativity and craftsmanship, IFC Crafts connects local artistry with customers in a more structured and convenient way.
+                </p>
+            </div>
+        </section>
+        <section id="contact" class="section-container contact-section reveal">
+            <h2 class="gothic-title center-text premium-fade-up highlight-text">Contact Us</h2>
+            
+            <div class="form-container premium-fade-up link-delay-1 form-glow">
+                <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="_subject" required placeholder="How can we help?">
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Type your inquiry details here..."></textarea>
+                    </div>
+    
+                <button type="submit" class="submit-btn">
+                    Send Message <i class="fas fa-paper-plane" style="margin-left: 8px; font-size: 0.85rem;"></i>
+                </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>IFC CRAFTS</h3>
+                <p>Handmade • Creative • Student Artists</p>
+            </div>
+            
+            <div class="footer-socials">
+                <h4>Visit Our Pages</h4>
+                    <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1FCM4HD3Uy/" target="_blank" class="social-icon fb">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                    <a href="https://www.instagram.com/ifc_crafts?fbclid=IwY2xjawR9bL9leHRuA2FlbQIxMABicmlkETFLREZkOW5oRlUwV1p0SmI2c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHqOFW1DUT4je-uGwDYlBzD3nbKcqX8M3lHsp7Jydc3wK8p5hkFXS-ncKt6j0_aem_1enSv-P-OlO4m32z-_7O_g" target="_blank" class="social-icon ig">
+                     <i class="fab fa-instagram"></i>
+                </a>
+                    </div>
+             </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
                 <p>Email: ifc.artgallery@gmail.com</p>
                 <p>Phone: +63 952 678 1122</p>
                 <p>Location: Taytay, Rizal</p>
             </div>
-
         </div>
-
-        <div class="text-center mt-3 copyright">
-            © 2026 IFC Crafts. All Rights Reserved.
+        <div class="footer-bottom">
+            <p>&copy; 2026 IFC Crafts. All Rights Reserved.</p>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="scripts/script.js"></script>
+    <script>
+        /* --- CAROUSEL SLIDER ENGINE --- */
+        const track = document.getElementById('auto-track');
+        const cards = Array.from(track.children);
+        
+        const firstClone = cards[0].cloneNode(true);
+        track.appendChild(firstClone);
+        
+        let currentIndex = 0;
+        const totalCards = cards.length;
+        const slideSpeed = 2000; 
+        let slideInterval;
+
+        function startSlideLoop() {
+            slideInterval = setInterval(() => {
+                currentIndex++;
+                track.style.transition = "transform 0.8s cubic-bezier(0.2, 1, 0.2, 1)"; 
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                if (currentIndex === totalCards) {
+                    setTimeout(() => {
+                        track.style.transition = "none";
+                        currentIndex = 0;
+                        track.style.transform = `translateX(0%)`;
+                    }, 800); 
+                }
+            }, slideSpeed);
+        }
+
+        startSlideLoop();
+        track.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        track.addEventListener('mouseleave', startSlideLoop);
 
 
+        /* --- DYNAMIC INTERSECTION CONTROLLER FOR REPEATING CINEMATIC FLOW --- */
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-45% 0px -45% 0px', 
+            threshold: 0.05
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // 1. Navbar dynamic underlining update
+                    const activeId = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${activeId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+
+                    // 2. Add class to play luxury cinematic intro animation
+                    entry.target.classList.add('active-scroll');
+                } else {
+                    // 3. Remove the class on leaving view (enables scroll-up replays)
+                    entry.target.classList.remove('active-scroll');
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => sectionObserver.observe(section));
+
+        // Mobile dropdown panel trigger closer
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('menu-toggle').checked = false;
+            });
+        });
+
+        document.querySelector("form").addEventListener("submit", function(e) {
+            e.preventDefault(); // This stops the page from actually sending data
+    
+            // This replaces the form with a success message
+            const formContainer = document.querySelector(".form-container");
+            formContainer.innerHTML = `
+                <div style="text-align: center; padding: 50px;">
+                    <i class="fas fa-check-circle" style="font-size: 3rem; color: #10b981; margin-bottom: 20px;"></i>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for reaching out. We will get back to you soon.</p>
+                </div>
+            `;
+        });
+    </script>
 </body>
 </html>
