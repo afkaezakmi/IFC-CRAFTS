@@ -404,12 +404,15 @@ function initializeCarousels() {
 
         // DUPLICATE ITEMS FOR INFINITE EFFECT
         requestAnimationFrame(() => {
-    		const originalItems = Array.from(track.children);
+    const originalItems = Array.from(track.children);
 
-		originalItems.forEach(child => {
-    			track.appendChild(child.cloneNode(true));
-		});
-	});
+    originalItems.forEach(child => {
+        track.appendChild(child.cloneNode(true));
+    });
+
+    startAutoScroll();
+});
+
 
         function startAutoScroll() {
 
@@ -468,9 +471,7 @@ function initializeCarousels() {
             }, 1500);
         });
 
-        window.addEventListener("load", () => {
-    		startAutoScroll();
-	});
+        
 
     });
 }
