@@ -635,7 +635,8 @@ body {
 /* Rating Star Option Elements Layout */
 .rating-select {
     display: flex;
-    gap: 15px;
+    flex-wrap: wrap; /* ✅ allows items to go to next line */
+    gap: 10px;       /* slightly tighter spacing for mobile */
     margin-top: 5px;
 }
 
