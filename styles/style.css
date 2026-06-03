@@ -541,7 +541,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .brand-name { font-size: 1.1rem; }
+    .brand-name { font-size: 2.2rem; }
     .home-text h1 { font-size: 2rem; }
     .carousel-wrapper.single-card-carousel { max-width: 290px; }
     .single-card-carousel .card-image-wrapper { height: 290px; }
