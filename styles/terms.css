@@ -1,4 +1,6 @@
-/* ========== RESET ========== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/the-seasons');
+
 * {
     margin: 0;
     padding: 0;
@@ -55,7 +57,7 @@ body {
 }
 
 .brand-name {
-    font-family: 'The Seasons', serif;
+    font-family: 'The Seasons', serif; /* ✅ FIX */
     font-size: 2.2rem;
     font-weight: 800;
     letter-spacing: 1px;
