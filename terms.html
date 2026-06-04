@@ -17,30 +17,34 @@
 <body>
 
 <!-- ✅ HEADER -->
-<nav class="navbar navbar-expand-lg custom-navbar">
-    <div class="container-fluid">
-
-        <a class="navbar-brand" href="index.html">
-            <img src="images/ifc_crafts.jpg" alt="Logo">
-            IFC CRAFTS
-        </a>
-
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">PRODUCT</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
-            </ul>
+<header class="navbar">
+    <div class="nav-container">
+        
+        <div class="logo-area">
+            <img src="images/ifc_crafts.jpg" alt="Logo" class="nav-logo">
+            <span class="brand-name">IFC CRAFTS</span>
         </div>
 
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="index.html#about">ABOUT</a>
+            <a href="products.html">PRODUCTS</a>
+            <a href="services.html">SERVICES</a>
+            <a href="index.html#contact">CONTACT US</a>
+            <a href="reviews.html">REVIEWS</a>
+        </nav>
+
     </div>
-</nav>
+</header>
+
 
 <main class="container px-3 px-md-4 px-lg-5 my-4 my-md-5" style="max-width: 900px;">
 
