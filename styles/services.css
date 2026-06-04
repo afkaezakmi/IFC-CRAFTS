@@ -742,6 +742,7 @@ body {
         position: absolute;
         top: calc(100% + 1px);
         width: 100%;
+        left: 0;
         background-color: #000000;
         flex-direction: column;
         align-items: center;
