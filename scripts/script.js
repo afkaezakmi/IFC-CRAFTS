@@ -65,7 +65,7 @@ function renderProducts(products) {
 
 // ✅ FILTER SETUP
 function setupFilters() {
-  ['small','medium','large','under200','200to500','above500','allPrice']
+  ['small','medium','large','under100','100to150','150to200','allPrice']
     .forEach(id => {
       const el = document.getElementById(id);
       if (el) el.addEventListener('change', applyFilters);
@@ -95,12 +95,18 @@ function applyFilters() {
     }
 
     // PRICE
+
     const num = parseInt(item.price.replace('₱',''));
     let priceMatch = true;
 
-    if (under200) priceMatch = num < 200;
-    else if (twoToFive) priceMatch = num >= 200 && num <= 500;
-    else if (above500) priceMatch = num > 500;
+    const under100 = document.getElementById('under100')?.checked;
+    const oneToFifty = document.getElementById('100to150')?.checked;
+    const fiftyToTwo = document.getElementById('150to200')?.checked;
+
+    if (under100) priceMatch = num < 100;
+    else if (oneToFifty) priceMatch = num >= 100 && num <= 150;
+    else if (fiftyToTwo) priceMatch = num > 150 && num <= 200;
+
 
     return sizeMatch && priceMatch;
   });
