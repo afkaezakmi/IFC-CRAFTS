@@ -146,14 +146,11 @@
     </footer>
 
     <script>
-        // 1. Element Selection
         const reviewForm = document.getElementById('reviewForm');
         const reviewsFeed = document.getElementById('reviewsFeed');
 
-        // 2. Initialize or Fetch Array from Browser Storage
         let savedReviews = JSON.parse(localStorage.getItem('ifc_crafts_reviews')) || [];
 
-        // 3. Helper Function: Generate Star HTML Icons based on count
         function generateStars(rating) {
             let starsHTML = '';
             for (let i = 1; i <= 5; i++) {
@@ -166,10 +163,9 @@
             return starsHTML;
         }
 
-        // 4. Core Function: Inject a review block into the UI Feed
         function renderReviewCard(reviewObj, isNewSubmission = false) {
             const card = document.createElement('div');
-            // Apply animation wrapper only if it was just submitted live
+
             card.className = `review-card glow-container ${isNewSubmission ? 'user-submitted' : ''}`;
             
             card.innerHTML = `
@@ -185,31 +181,25 @@
                 <p class="review-text">${reviewObj.text}</p>
             `;
             
-            // Insert at the top of the feed container
             reviewsFeed.insertBefore(card, reviewsFeed.firstChild);
         }
 
-        // 5. Load Engine: Render all stored items on initial page mount
         function loadSavedReviews() {
             savedReviews.forEach(review => {
                 renderReviewCard(review, false);
             });
         }
 
-        // Run the loader immediately when script initializes
         loadSavedReviews();
 
-        // 6. Form Submission Event Handler
         reviewForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Stop page reload
+            event.preventDefault(); 
 
-            // Extract values safely
             const name = document.getElementById('reviewerName').value;
             const product = document.getElementById('productSelected').value;
             const textContent = document.getElementById('reviewMessage').value;
             const ratingValue = parseInt(document.querySelector('input[name="ratingStar"]:checked').value);
 
-            // Structure a clean data object
             const newReview = {
                 name: name,
                 product: product,
@@ -217,18 +207,14 @@
                 rating: ratingValue
             };
 
-            // Push into runtime array and update Browser Storage
             savedReviews.push(newReview);
             localStorage.setItem('ifc_crafts_reviews', JSON.stringify(savedReviews));
 
-            // Instantly add to UI with smooth slide-in entry animation
             renderReviewCard(newReview, true);
 
-            // Reset layout fields
             reviewForm.reset();
         });
 
-        // Mobile dropdown panel trigger closer
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.getElementById('menu-toggle').checked = false;

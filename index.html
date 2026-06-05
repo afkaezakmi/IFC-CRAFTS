@@ -212,7 +212,6 @@
     </footer>
 
     <script>
-        /* --- CAROUSEL SLIDER ENGINE --- */
         const track = document.getElementById('auto-track');
         const cards = Array.from(track.children);
         
@@ -243,9 +242,7 @@
         startSlideLoop();
         track.addEventListener('mouseenter', () => clearInterval(slideInterval));
         track.addEventListener('mouseleave', startSlideLoop);
-
-
-        /* --- DYNAMIC INTERSECTION CONTROLLER FOR REPEATING CINEMATIC FLOW --- */
+        
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -267,10 +264,8 @@
                         }
                     });
 
-                    // 2. Add class to play luxury cinematic intro animation
                     entry.target.classList.add('active-scroll');
                 } else {
-                    // 3. Remove the class on leaving view (enables scroll-up replays)
                     entry.target.classList.remove('active-scroll');
                 }
             });
@@ -278,7 +273,6 @@
 
         sections.forEach(section => sectionObserver.observe(section));
 
-        // Mobile dropdown panel trigger closer
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.getElementById('menu-toggle').checked = false;
@@ -286,9 +280,8 @@
         });
 
         document.querySelector("form").addEventListener("submit", function(e) {
-            e.preventDefault(); // This stops the page from actually sending data
+            e.preventDefault(); 
     
-            // This replaces the form with a success message
             const formContainer = document.querySelector(".form-container");
             formContainer.innerHTML = `
                 <div style="text-align: center; padding: 50px;">

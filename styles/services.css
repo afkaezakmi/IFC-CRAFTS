@@ -1,4 +1,3 @@
-/* --- RESET & FONTS --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=UnifrakturMaguntia&display=swap');
 @import url('https://fonts.cdnfonts.com/css/the-seasons');
 
@@ -6,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif; /* Updated globally to Inter */
+    font-family: 'Inter', sans-serif; 
 }
 
 html {
@@ -15,8 +14,8 @@ html {
 }
 
 body {
-    background-color: #ffffff; /* Premium Pure White Canvas Body */
-    color: #0f172a;            /* Charcoal Black Main Text Font */
+    background-color: #ffffff; 
+    color: #0f172a;    
     overflow-x: hidden; 
     padding-top: 140px;
 }
@@ -28,7 +27,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* --- MINIMALIST LIGHT DESIGN REFACTOR MODIFICATIONS --- */
 .highlight-text {
     background: linear-gradient(135deg, #0f172a 30%, #475569 100%);
     -webkit-background-clip: text;
@@ -39,7 +37,6 @@ body {
     color: #0f172a;
 }
 
-/* Container Border Framework shadows */
 .glow-container {
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.06); 
@@ -52,7 +49,6 @@ body {
     box-shadow: 0 30px 50px -15px rgba(0, 0, 0, 0.15);
 }
 
-/* --- SOLID BLACK STICKY NAVBAR STYLES --- */
 .navbar {
     background-color: #000000;
     padding: 22px 5%;
@@ -100,7 +96,7 @@ body {
 }
 
 .nav-links a {
-    font-family: 'Inter', sans-serif; /* Explicitly set to Inter */
+    font-family: 'Inter', sans-serif; 
     color: #94a3b8;
     text-decoration: none;
     margin-left: 35px;
@@ -117,9 +113,9 @@ body {
 }
 
 .nav-links a.active {
-    color: #ffffff;            /* Pure solid crisp white text */
+    color: #ffffff;            
     font-weight: 800;
-    border-bottom: 2px solid #ffffff; /* Solid White Underline Marker */
+    border-bottom: 2px solid #ffffff; 
 }
 
 .menu-toggle { 
@@ -140,7 +136,7 @@ body {
     display: block;
     height: 2px;
     width: 100%;
-    background-color: #ffffff; /* Bold Stack Lines for Dark Backdrop */
+    background-color: #ffffff; 
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -184,7 +180,6 @@ body {
     opacity: 1;
 }
 
-/* --- MAIN WRAPPER --- */
 .main-wrapper {
     background-color: #ffffff;
     width: 100%;
@@ -200,7 +195,6 @@ body {
     width: 100%;
 }
 
-/* REDUCE TOP SPACE FOR FIRST SECTION */
 
 .reminders-section .section-container {
     padding-top: 40px;
@@ -230,7 +224,7 @@ body {
 }
 
 .notice-title {
-    color: #d7bbfa; /* matches your hellobar lavender */
+    color: #d7bbfa; 
     font-weight: 800;
 }
 
@@ -358,7 +352,6 @@ body {
     opacity: 1;
 }
 
-/* COLLAPSED STATE */
 
 .collapsible-card.collapsed .card-content {
     max-height: 0;
@@ -396,9 +389,9 @@ body {
         grid-template-columns: 1fr;
     }
 }
-/* --- PURE BLACK FOOTER STYLES --- */
+
 .footer {
-    background-color: #000000; /* Grounded Luxury Pure Black Base Footer */
+    background-color: #000000; 
     padding: 70px 5% 30px 5%;
     border-top: 1px solid #111827;
     width: 100%;
@@ -500,8 +493,6 @@ body {
     transform: scale(1.05);
 }
 
-/* ===== REMINDERS SECTION ===== */
-
 .reminders-section {
     width: 100%;
     background: #ffffff;
@@ -534,8 +525,6 @@ body {
     font-size: 1.3rem;
     top: -1px;
 }
-
-/* ===== REVERSE LAYOUT ===== */
 
 .reverse {
     flex-direction: row-reverse;
@@ -656,10 +645,53 @@ body {
     right: 15px;
 }
 
+.hamburger {
+    position: relative;
+    width: 26px;
+    height: 18px;
+}
+
+.hamburger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 8px; }
+.hamburger span:nth-child(3) { top: 16px; }
+
 @media (max-width: 768px) {
     .navbar { padding: 15px 20px; }
 
+#hellobar-bar {
+        top: 75px; 
+    }
+
+    body {
+        padding-top: 120px; 
+    }
+
     .hamburger { display: flex; }
+
+    .menu-toggle:checked + .hamburger span:nth-child(1) {
+    top: 8px;
+    transform: rotate(45deg);
+}
+
+.menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked + .hamburger span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-45deg);
+}
+
 
     .nav-links {
         position: absolute;
@@ -687,7 +719,6 @@ body {
         pointer-events: auto;
     }
 
-    /* ✅ ✅ THIS IS THE ONLY NEW PART (FOOTER FIX) ✅ ✅ */
     .footer-container {
         flex-direction: column;
         align-items: center;

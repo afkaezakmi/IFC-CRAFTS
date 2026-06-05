@@ -1,8 +1,6 @@
-/* ========== FONTS ========== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 @import url('https://fonts.cdnfonts.com/css/the-seasons');
 
-/* ========== RESET ========== */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +12,6 @@ html, body {
     height: 100%;
 }
 
-/* ========== BODY (UNCHANGED) ========== */
 body {
     display: flex;
     flex-direction: column;
@@ -24,7 +21,6 @@ body {
     background-attachment: fixed;
 }
 
-/* ========== NAVBAR (UNCHANGED) ========== */
 .navbar {
     background-color: #000000;
     padding: 22px 5%;
@@ -66,7 +62,6 @@ body {
     color: #ffffff;
 }
 
-/* NAV LINKS */
 .nav-links {
     display: flex;
     align-items: center;
@@ -93,7 +88,6 @@ body {
     border-bottom: 2px solid #ffffff;
 }
 
-/* HAMBURGER */
 .menu-toggle {
     display: none;
 }
@@ -116,13 +110,11 @@ body {
     border-radius: 2px;
 }
 
-/* ========== MAIN ========== */
 main {
     flex: 1;
     padding-top: 140px;
 }
 
-/* ========== SECTION ========== */
 .section-box {
     background: #ffffff;
     border-radius: 16px;
@@ -158,7 +150,6 @@ main {
     margin-bottom: 6px;
 }
 
-/* ========== ✅ FOOTER (FULL MATCH) ========== */
 .footer {
     background-color: #000000;
     padding: 70px 5% 30px 5%;
@@ -180,10 +171,10 @@ main {
 
 /* BRAND */
 .footer-brand h3 {
-    font-family: 'The Seasons', serif;   /* ✅ correct font */
-    font-size: 1.6rem;                   /* ✅ slightly bigger */
+    font-family: 'The Seasons', serif;  
+    font-size: 1.6rem;                   
     font-weight: 700;
-    letter-spacing: 1.2px;               /* ✅ more spacing */
+    letter-spacing: 1.2px;            
     color: #ffffff;
     margin-bottom: 12px;
 }
@@ -194,7 +185,6 @@ main {
     letter-spacing: 0.3px;
 }
 
-/* HEADINGS */
 .footer-socials h4,
 .footer-contact h4 {
     margin-bottom: 20px;
@@ -204,7 +194,6 @@ main {
     font-weight: 600;
 }
 
-/* SOCIAL ICONS */
 .social-icons {
     display: flex;
     gap: 15px;
@@ -231,7 +220,7 @@ main {
     color: #000000;
 }
 
-/* CONTACT */
+
 .footer-contact p {
     color: #94a3b8;
     font-size: 0.9rem;
@@ -241,7 +230,6 @@ main {
     gap: 6px;
 }
 
-/* COPYRIGHT */
 .footer-bottom {
     max-width: 1200px;
     margin: 50px auto 0 auto;
@@ -252,7 +240,6 @@ main {
     font-size: 0.85rem;
 }
 
-/* ========== ✅ MOBILE ========== */
 @media (max-width: 768px) {
 
     .navbar {
@@ -292,7 +279,7 @@ main {
         font-size: 1.1rem;
     }
 
-    /* ✅ FOOTER MOBILE */
+
     .footer-container {
         flex-direction: column;
         align-items: center;

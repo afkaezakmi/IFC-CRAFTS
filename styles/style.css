@@ -1,4 +1,3 @@
-/* --- RESET & FONTS --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=UnifrakturMaguntia&display=swap');
 @import url('https://fonts.cdnfonts.com/css/the-seasons');
 
@@ -6,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif; /* Updated globally to Inter */
+    font-family: 'Inter', sans-serif; 
 }
 
 html {
@@ -15,8 +14,8 @@ html {
 }
 
 body {
-    background-color: #ffffff; /* Premium Pure White Canvas Body */
-    color: #0f172a;            /* Charcoal Black Main Text Font */
+    background-color: #ffffff; 
+    color: #0f172a;       
     overflow-x: hidden; 
 }
 
@@ -27,7 +26,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* --- MINIMALIST LIGHT DESIGN REFACTOR MODIFICATIONS --- */
 .highlight-text {
     background: linear-gradient(135deg, #0f172a 30%, #475569 100%);
     -webkit-background-clip: text;
@@ -49,7 +47,6 @@ body {
     color: #0f172a;
 }
 
-/* Container Border Framework shadows */
 .glow-container {
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.06); 
@@ -62,7 +59,6 @@ body {
     box-shadow: 0 30px 50px -15px rgba(0, 0, 0, 0.15);
 }
 
-/* --- PREMIUM INTERIOR MOVEMENT ENGINE --- */
 .premium-fade-up, .premium-scale-in {
     opacity: 0;
     will-change: transform, opacity, filter;
@@ -86,7 +82,6 @@ body {
     transform: translateY(0) scale(1);
 }
 
-/* --- SOLID BLACK STICKY NAVBAR STYLES --- */
 .navbar {
     background-color: #000000;
     padding: 22px 5%;
@@ -134,7 +129,7 @@ body {
 }
 
 .nav-links a {
-    font-family: 'Inter', sans-serif; /* Explicitly set to Inter */
+    font-family: 'Inter', sans-serif; 
     color: #94a3b8;
     text-decoration: none;
     margin-left: 35px;
@@ -151,9 +146,9 @@ body {
 }
 
 .nav-links a.active {
-    color: #ffffff;            /* Pure solid crisp white text */
+    color: #ffffff;            
     font-weight: 800;
-    border-bottom: 2px solid #ffffff; /* Solid White Underline Marker */
+    border-bottom: 2px solid #ffffff; 
 }
 
 .menu-toggle { 
@@ -174,12 +169,11 @@ body {
     display: block;
     height: 2px;
     width: 100%;
-    background-color: #ffffff; /* Bold Stack Lines for Dark Backdrop */
+    background-color: #ffffff; 
     border-radius: 2px;
     transition: all 0.3s ease;
 }
 
-/* --- MAIN WRAPPER --- */
 .main-wrapper {
     background-color: #ffffff;
     width: 100%;
@@ -202,7 +196,6 @@ body {
     width: 100%;
 }
 
-/* --- HOME SECTION --- */
 .home-section { gap: 80px; }
 .home-text { flex: 1.1; }
 .home-text h1 {
@@ -215,7 +208,6 @@ body {
     line-height: 1.7;
 }
 
-/* --- CAROUSEL DISPLAY FRAME --- */
 .carousel-wrapper.single-card-carousel {
     position: relative;
     flex: 1; 
@@ -273,7 +265,6 @@ body {
     color: #475569;
 }
 
-/* --- ABOUT SECTION --- */
 .about-section { 
     gap: 80px; 
 }
@@ -309,7 +300,6 @@ body {
     text-align: justify;
 }
 
-/* --- FUTURE SECTIONS COMPONENT STYLES --- */
 .generic-future-section {
     flex-direction: column;
     gap: 40px;
@@ -359,7 +349,6 @@ body {
     margin: 0 auto;
 }
 
-/* --- CONTACT SECTION --- */
 .contact-section { flex-direction: column; gap: 50px; }
 .center-text { text-align: center; }
 
@@ -432,9 +421,8 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* --- PURE BLACK FOOTER STYLES --- */
 .footer {
-    background-color: #000000; /* Grounded Luxury Pure Black Base Footer */
+    background-color: #000000;
     padding: 70px 5% 30px 5%;
     border-top: 1px solid #111827;
     width: 100%;
@@ -490,7 +478,6 @@ body {
     font-size: 0.85rem;
 }
 
-/* --- RESPONSIVE MEDIA QUERIES --- */
 @media (max-width: 992px) {
     .home-section { flex-direction: column; text-align: center; gap: 50px; }
     .home-text h1 { font-size: 2.5rem; }
@@ -513,7 +500,7 @@ body {
         top: calc(100% + 1px);
         right: 0;
         width: 100%;
-        background-color: #000000; /* Matching solid black dropdown panel block */
+        background-color: #000000;
         flex-direction: column;
         align-items: center;
         padding: 30px 0;
@@ -530,7 +517,6 @@ body {
     
     .menu-toggle:checked ~ .nav-links { opacity: 1; transform: translateY(0); pointer-events: auto; }
     
-    /* Perfect CSS Hamburger Stack Transitions */
     .menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .menu-toggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
     .menu-toggle:checked ~ .hamburger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
@@ -547,7 +533,6 @@ body {
     .single-card-carousel .card-image-wrapper { height: 290px; }
 }
 
-/* --- REVIEWS LAYOUT EXTENSIONS --- */
 .reviews-page-layout {
     display: flex;
     align-items: flex-start;
@@ -558,7 +543,7 @@ body {
 .review-form-wrapper {
     flex: 1;
     position: sticky;
-    top: 130px; /* Aligns neatly under the navigation bar frame */
+    top: 130px; 
 }
 
 .reviews-feed-wrapper {
@@ -571,11 +556,10 @@ body {
     flex-direction: column;
     gap: 20px;
     max-height: 700px;
-    overflow-y: auto; /* Adds clean aesthetic scrolling mechanism inside the feed frame */
+    overflow-y: auto;
     padding-right: 10px;
 }
 
-/* Custom Scrollbar for Reviews Feed Layout */
 .reviews-feed::-webkit-scrollbar {
     width: 6px;
 }
@@ -587,14 +571,12 @@ body {
     border-radius: 10px;
 }
 
-/* Individual Review UI Element Layout */
 .review-card {
     background: #f8fafc;
     padding: 24px;
     border-radius: 18px !important;
 }
 
-/* Visual pulse highlight for runtime submission */
 .review-card.user-submitted {
     animation: slideInHighlighter 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     border-left: 3px solid #000000;
@@ -621,7 +603,7 @@ body {
 }
 
 .review-stars {
-    color: #f59e0b; /* Solid premium gold-amber hue */
+    color: #f59e0b;
     font-size: 0.95rem;
 }
 
@@ -635,8 +617,8 @@ body {
 /* Rating Star Option Elements Layout */
 .rating-select {
     display: flex;
-    flex-wrap: wrap; /* ✅ allows items to go to next line */
-    gap: 10px;       /* slightly tighter spacing for mobile */
+    flex-wrap: wrap; 
+    gap: 10px;       
     margin-top: 5px;
 }
 
@@ -662,13 +644,13 @@ body {
     border-color: #000000;
 }
 
-/* Runtime Addition Animation Frame */
+
+
 @keyframes slideInHighlighter {
     0% { opacity: 0; transform: translateY(-20px); filter: blur(4px); }
     100% { opacity: 1; transform: translateY(0); filter: blur(0); }
 }
 
-/* --- REVIEWS TABLET & PHONE BREAKPOINTS --- */
 @media (max-width: 768px) {
 
     .navbar { padding: 15px 20px; }
@@ -694,10 +676,9 @@ body {
      .nav-links a.active {
     color: #ffffff;
     font-weight: 800;
-    border-bottom: 2px solid #ffffff; /* ✅ ADD THIS */
+    border-bottom: 2px solid #ffffff; 
 }
 
-    /* ✅ MATCH PRODUCT STYLE TEXT */
     .nav-links a {
         margin: 14px 0;
         font-size: 1.1rem;
@@ -705,7 +686,7 @@ body {
         letter-spacing: 0.5px;
         color: #94a3b8;
 
-        border-bottom: 2px solid transparent; /* ✅ keep underline system */
+        border-bottom: 2px solid transparent; 
         padding-bottom: 6px;
         transition: color 0.3s ease;
     }
